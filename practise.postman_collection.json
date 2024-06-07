@@ -1,0 +1,898 @@
+{
+	"info": {
+		"_postman_id": "e42ba375-e910-4edf-8018-7235249df266",
+		"name": "practise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Response code Tests",
+			"item": [
+				{
+					"name": "find pet by ID 404 Notfound",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12003",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find pet by ID 200 ok",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find pet by ID 401 not authorized",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "QpwL5tke4Pnpja7X4",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "API Key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find pet by ID 403 forbidden",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "QpwL5tke4Pnpja7X4",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "API Key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "suceess rsponse",
+			"item": [
+				{
+					"name": "upload pet image",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"//pm.collectionVariables.get('petid');\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var responseBody = pm.response.json();\r",
+									"console.log(responseBody)\r",
+									"let message=responseBody.message;\r",
+									"console.log(message)\r",
+									" pm.test(\"Response body  contains request body\", function() {\r",
+									"        pm.expect(responseBody.message).contains(pm.collectionVariables.get('additionalMetadata'));\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Api-key",
+								"value": "special-key",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "petId",
+									"value": "{{petId}}",
+									"type": "text"
+								},
+								{
+									"key": "additionalMetadata",
+									"value": "{{additionalMetadata}}",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/hp/OneDrive/Desktop/ASUS Zenbook pro DUO 15 OLED UX582.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pet/{{petid}}/uploadImage",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet",
+								"{{petid}}",
+								"uploadImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new pet to store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"{{catName}}\"\r\n  },\r\n  \"name\": \"{{petName}}\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"{{tagname}}\"\r\n    }\r\n  ],\r\n  \"status\": \"{{status}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update an existing pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var responseBody = pm.response.json();\r",
+									"pm.test(\"Body matches response\", function () {\r",
+									"    pm.expect(responseBody.category.name).to.include(pm.collectionVariables.get('catName'));\r",
+									"    pm.expect(responseBody.name).to.include(pm.collectionVariables.get('petName'));\r",
+									"    pm.expect(responseBody.status).to.include(pm.collectionVariables.get('status'));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": {{petid}},\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\":\"{{catName}}\"\r\n  },\r\n  \"name\": \"{{petName}}\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \"{{status}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "java script array",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const students=['josh','Tom','Mary','Sam'];  //array defination \r",
+									"console.log(students.length);\r",
+									"console.log(students.push('mmm')); //insert value inside array \r",
+									"console.log(students);\r",
+									"var lastname=students.pop(); //remove last element in array and store it in variable \r",
+									"console.log(lastname);\r",
+									"const studentsarray=[{\r",
+									"    'studentname':'kh',\r",
+									"    'studentage':'16',\r",
+									"    'year':10,\r",
+									"    subjects:['english','arabic','french']\r",
+									"},\r",
+									"{\r",
+									"   'studentname':'ali',\r",
+									"    'studentage':'16',\r",
+									"    'year':10,\r",
+									"    subjects:['spanish','arabic','french'] \r",
+									"    \r",
+									"}];\r",
+									"console.log(students[0].subjects[0]);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find pet by status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp= pm.response.json();\r",
+									"/*****finding property inside array using foreach ****/\r",
+									"/*resp.forEach(obj=>{\r",
+									"    if(obj.id ===12001){\r",
+									"        console.log(obj.name);\r",
+									"    }\r",
+									"    \r",
+									"})*/\r",
+									"/*****finding property inside array using find  ****/\r",
+									"/*resp.find((obj)=>{\r",
+									"    if(obj.id ===12001){\r",
+									"        console.log(obj.name);\r",
+									"    }\r",
+									"})*/\r",
+									"/*\r",
+									"/*finding property inside array using if ****/\r",
+									"//console.log(resp);\r",
+									"/*for(i=0; i<resp.length;i++){\r",
+									"    if(resp[i].id===12001){\r",
+									"        console.log(resp[i].name);\r",
+									"    }\r",
+									"}*/\r",
+									"\r",
+									"/*\r",
+									"for(i=0; i<resp.length;i++){\r",
+									"    if(resp[i].id===12001){\r",
+									"       pm.collectionVariables.set('petid',resp[i].id) ;\r",
+									"    }\r",
+									"}*/\r",
+									"//map method\r",
+									"/*console.log(resp.map((value)=>value.id));*/\r",
+									"\r",
+									"const petids=resp.map((value)=>value.id);\r",
+									"console.log(petids);\r",
+									"console.log(petids.indexOf(12001));\r",
+									"pm.collectionVariables.set('petidmap',resp[petids.indexOf(12001)].id)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pet/findByStatus?status={{status}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet",
+								"findByStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "{{status}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "javascript array include,indexof",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const students=['hhh','tom','mary','muh','ali'];\r",
+									"\r",
+									"let indx=students.indexOf('ali')\r",
+									"console.log(indx);\r",
+									"let stdn=students.find((value)=>value===\"ali\");\r",
+									"console.log(stdn);\r",
+									"console.log(students.filter((value)=>value===\"ali\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "java script objects",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const student=\r",
+									"{studentname:\"john\",age:16,\"studen year\":\"10\"}; //object contains properties \r",
+									"console.log(student.studentname); //how to define property inside objects using 2 ways >first one dot notation \r",
+									"console.log(student[\"age\"]) ; //second way bracket notation >it is helpful when property contain space \r",
+									"console.log(student[\"studen year\"])\r",
+									"\r",
+									"// nested objects\r",
+									"const student2=\r",
+									"{studentname:\"john\",age:16,\"studen year\":\"10\",\r",
+									"marks:{\r",
+									"    maths:90,\r",
+									"    english:85,\r",
+									"    arabic:50\r",
+									"}};\r",
+									"console.log(student2.marks.english);//dot notation\r",
+									"console.log(student2[\"marks\"][\"arabic\"]\r",
+									");\r",
+									"//object methods \r",
+									"\r",
+									"const student3={\r",
+									"    'studentname':'kh',\r",
+									"    'studentage':'16',\r",
+									"    'year':10,\r",
+									"    welcome:function(){\r",
+									"        console.log(\"welcome Radwa \"+this.studentname)\r",
+									"    }\r",
+									"    \r",
+									"\r",
+									"};\r",
+									"student3.welcome();\r",
+									"\r",
+									"// stringfy()\r",
+									"let studentjson=JSON.stringify(student3); //convert java script object to jason  string \r",
+									"console.log(studentjson);\r",
+									"let studentobj=JSON.parse(studentjson); //converst json to java scribt object \r",
+									"console.log(studentobj);\r",
+									"console.log(studentobj.studentage);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find pet by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/{{petid}}",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"{{petid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "java script if else",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"let number=6;\r",
+									"if(number<=5)\r",
+									"{\r",
+									"    console.log(\"the number is less than or equal to 5\");\r",
+									"\r",
+									"}\r",
+									"else if (number==5){\r",
+									"     console.log(\"the number is equal to  5\");\r",
+									"}\r",
+									"else{\r",
+									"    console.log(\"number is more than 5\")\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"cat\"\r\n  },\r\n  \"name\": \"bossy cat\",\r\n  \"photoUrls\": [\r\n    \"https://drive.google.com/file/d/1iEhr7R_THpGjttDQCFV1ST_P3BqN4hDE/view?usp=drive_link\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"cat\"\r\n    }\r\n  ],\r\n  \"status\": \" available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/12002",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								"12002"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "End to end cases",
+			"item": []
+		},
+		{
+			"name": "find pet by ID Copy 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const students=['josh','Tom','Mary','Sam'];\r",
+							"//console.log(students.length);\r",
+							"var responseBody = pm.response.json();\r",
+							"var message=responseBody.message;\r",
+							" pm.test(\"Response body  contains deleted petid\", function() {\r",
+							"        pm.expect(responseBody.message).contains(pm.collectionVariables.get('petid'));\r",
+							"    });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/{{petid}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"{{petid}}"
+					],
+					"query": [
+						{
+							"key": "petId",
+							"value": "12001",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var petids=[\"12001\",\"12002\"];",
+					"pm.collectionVariables.set(\"petid\", petids[_.random(petids.length - 1)]);",
+					"var cattName =pm.collectionVariables.get('petid');",
+					"//pm.collectionVariables.set(\"petid\",petid);",
+					"//pm.collectionVariables.get('petid');",
+					"var additionalMetadatas = [\"cat\", \"Dog\", \"fish\"];",
+					"pm.collectionVariables.set(\"additionalMetadata\", additionalMetadatas[_.random(additionalMetadatas.length - 1)]);",
+					"pm.collectionVariables.get('additionalMetadata');",
+					"",
+					"var catNames = [\"largeanimal\",\"bird\", \"smallanimal\"];",
+					"var petNames=[\"Dog\",\"bird\",\"cat\"];",
+					"var statuss=[\"available\",\"sold\",\"pending\"];",
+					"var tagnames=[\"DG\",\"BD\",\"CT\"];",
+					"pm.collectionVariables.set(\"catName\", catNames[_.random(catNames.length - 1)]);",
+					"var cattName =pm.collectionVariables.get('catName');",
+					"",
+					"pm.collectionVariables.set(\"petName\", petNames[_.random(petNames.length - 1)]);",
+					"var petName =pm.collectionVariables.get('petName');",
+					"",
+					"console.log('pettName',petName)",
+					"",
+					"pm.collectionVariables.set(\"status\", statuss[_.random(statuss.length - 1)]);",
+					"var status =pm.collectionVariables.get('status');",
+					"",
+					"pm.collectionVariables.set(\"tagname\", tagnames[_.random(tagnames.length - 1)]);",
+					"var status =pm.collectionVariables.get('tagname');"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "petid",
+			"value": "12001"
+		},
+		{
+			"key": "url",
+			"value": "https://petstore.swagger.io/v2"
+		},
+		{
+			"key": "petid",
+			"value": 12001,
+			"disabled": true
+		},
+		{
+			"key": "petidmap",
+			"value": 12001
+		},
+		{
+			"key": "additionalMetadata",
+			"value": ""
+		},
+		{
+			"value": "",
+			"disabled": true
+		},
+		{
+			"key": "catname",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "petname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "status ",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "catName",
+			"value": ""
+		},
+		{
+			"key": "petName",
+			"value": ""
+		},
+		{
+			"key": "status",
+			"value": ""
+		},
+		{
+			"key": "tagname",
+			"value": ""
+		}
+	]
+}
